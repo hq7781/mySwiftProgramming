@@ -24,7 +24,8 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.value(forKey: "timeStamp")!.description
+                // HONG label.text = detail.value(forKey: "timeStamp")!.description
+                label.text = (detail.value(forKey: "timeStamp") as! NSObject).description
             }
         }
         

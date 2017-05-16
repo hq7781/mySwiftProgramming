@@ -78,10 +78,10 @@ class DemoToutchIDViewController: UIViewController {
             myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,
                                          localizedReason: "テスト認証",
                                          reply: {
-                                            // HONG (success: Bool, error: NSError!) -> Void in
-                                            (success: Bool, error: NSError?) -> Void in
+                                            (success: Bool, error: Error?) -> Void in
                                             self.updateMySecurityLabel(success)
-            } as! (Bool, Error?) -> Void)
+                                            print("Touch ID Auth result: %@", error.debugDescription)
+            } )
         }
     }
     
