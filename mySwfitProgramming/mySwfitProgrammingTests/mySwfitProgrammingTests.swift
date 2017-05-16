@@ -2,7 +2,7 @@
 //  mySwfitProgrammingTests.swift
 //  mySwfitProgrammingTests
 //
-//  Created by recomot on 5/16/17.
+//  Created by enixapp on 5/16/17.
 //  Copyright © 2017 enixsoft. All rights reserved.
 //
 
