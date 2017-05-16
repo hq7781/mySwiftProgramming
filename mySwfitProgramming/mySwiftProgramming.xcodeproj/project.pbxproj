@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		868C958B1ECA9D9500A712CD /* mySwfitProgramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySwfitProgramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		868C958B1ECA9D9500A712CD /* mySwiftProgramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySwiftProgramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		868C958E1ECA9D9500A712CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		868C95911ECA9D9600A712CD /* mySwfitProgramming.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mySwfitProgramming.xcdatamodel; sourceTree = "<group>"; };
 		868C95931ECA9D9600A712CD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -46,10 +46,10 @@
 		868C959A1ECA9D9600A712CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868C959D1ECA9D9600A712CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		868C959F1ECA9D9600A712CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		868C95A41ECA9D9700A712CD /* mySwfitProgrammingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mySwfitProgrammingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		868C95A41ECA9D9700A712CD /* mySwiftProgrammingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mySwiftProgrammingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		868C95A81ECA9D9700A712CD /* mySwfitProgrammingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySwfitProgrammingTests.swift; sourceTree = "<group>"; };
 		868C95AA1ECA9D9700A712CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		868C95AF1ECA9D9700A712CD /* mySwfitProgrammingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mySwfitProgrammingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		868C95AF1ECA9D9700A712CD /* mySwiftProgrammingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mySwiftProgrammingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		868C95B31ECA9D9700A712CD /* mySwfitProgrammingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySwfitProgrammingUITests.swift; sourceTree = "<group>"; };
 		868C95B51ECA9D9700A712CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoToutchIDViewController.swift; path = Demo/DemoToutchIDViewController.swift; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 		868C958C1ECA9D9500A712CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				868C958B1ECA9D9500A712CD /* mySwfitProgramming.app */,
-				868C95A41ECA9D9700A712CD /* mySwfitProgrammingTests.xctest */,
-				868C95AF1ECA9D9700A712CD /* mySwfitProgrammingUITests.xctest */,
+				868C958B1ECA9D9500A712CD /* mySwiftProgramming.app */,
+				868C95A41ECA9D9700A712CD /* mySwiftProgrammingTests.xctest */,
+				868C95AF1ECA9D9700A712CD /* mySwiftProgrammingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		868C958A1ECA9D9500A712CD /* mySwfitProgramming */ = {
+		868C958A1ECA9D9500A712CD /* mySwiftProgramming */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 868C95B81ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwfitProgramming" */;
+			buildConfigurationList = 868C95B81ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwiftProgramming" */;
 			buildPhases = (
 				868C95871ECA9D9500A712CD /* Sources */,
 				868C95881ECA9D9500A712CD /* Frameworks */,
@@ -157,14 +157,14 @@
 			);
 			dependencies = (
 			);
-			name = mySwfitProgramming;
+			name = mySwiftProgramming;
 			productName = mySwfitProgramming;
-			productReference = 868C958B1ECA9D9500A712CD /* mySwfitProgramming.app */;
+			productReference = 868C958B1ECA9D9500A712CD /* mySwiftProgramming.app */;
 			productType = "com.apple.product-type.application";
 		};
-		868C95A31ECA9D9700A712CD /* mySwfitProgrammingTests */ = {
+		868C95A31ECA9D9700A712CD /* mySwiftProgrammingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 868C95BB1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwfitProgrammingTests" */;
+			buildConfigurationList = 868C95BB1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwiftProgrammingTests" */;
 			buildPhases = (
 				868C95A01ECA9D9700A712CD /* Sources */,
 				868C95A11ECA9D9700A712CD /* Frameworks */,
@@ -175,14 +175,14 @@
 			dependencies = (
 				868C95A61ECA9D9700A712CD /* PBXTargetDependency */,
 			);
-			name = mySwfitProgrammingTests;
+			name = mySwiftProgrammingTests;
 			productName = mySwfitProgrammingTests;
-			productReference = 868C95A41ECA9D9700A712CD /* mySwfitProgrammingTests.xctest */;
+			productReference = 868C95A41ECA9D9700A712CD /* mySwiftProgrammingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		868C95AE1ECA9D9700A712CD /* mySwfitProgrammingUITests */ = {
+		868C95AE1ECA9D9700A712CD /* mySwiftProgrammingUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 868C95BE1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwfitProgrammingUITests" */;
+			buildConfigurationList = 868C95BE1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwiftProgrammingUITests" */;
 			buildPhases = (
 				868C95AB1ECA9D9700A712CD /* Sources */,
 				868C95AC1ECA9D9700A712CD /* Frameworks */,
@@ -193,9 +193,9 @@
 			dependencies = (
 				868C95B11ECA9D9700A712CD /* PBXTargetDependency */,
 			);
-			name = mySwfitProgrammingUITests;
+			name = mySwiftProgrammingUITests;
 			productName = mySwfitProgrammingUITests;
-			productReference = 868C95AF1ECA9D9700A712CD /* mySwfitProgrammingUITests.xctest */;
+			productReference = 868C95AF1ECA9D9700A712CD /* mySwiftProgrammingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,18 +210,22 @@
 				TargetAttributes = {
 					868C958A1ECA9D9500A712CD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ATSE3MDB5Y;
+						LastSwiftMigration = 0820;
 					};
 					868C95A31ECA9D9700A712CD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 868C958A1ECA9D9500A712CD;
 					};
 					868C95AE1ECA9D9700A712CD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 868C958A1ECA9D9500A712CD;
 					};
 				};
 			};
-			buildConfigurationList = 868C95861ECA9D9500A712CD /* Build configuration list for PBXProject "mySwfitProgramming" */;
+			buildConfigurationList = 868C95861ECA9D9500A712CD /* Build configuration list for PBXProject "mySwiftProgramming" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,9 +238,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				868C958A1ECA9D9500A712CD /* mySwfitProgramming */,
-				868C95A31ECA9D9700A712CD /* mySwfitProgrammingTests */,
-				868C95AE1ECA9D9700A712CD /* mySwfitProgrammingUITests */,
+				868C958A1ECA9D9500A712CD /* mySwiftProgramming */,
+				868C95A31ECA9D9700A712CD /* mySwiftProgrammingTests */,
+				868C95AE1ECA9D9700A712CD /* mySwiftProgrammingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,12 +306,12 @@
 /* Begin PBXTargetDependency section */
 		868C95A61ECA9D9700A712CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 868C958A1ECA9D9500A712CD /* mySwfitProgramming */;
+			target = 868C958A1ECA9D9500A712CD /* mySwiftProgramming */;
 			targetProxy = 868C95A51ECA9D9700A712CD /* PBXContainerItemProxy */;
 		};
 		868C95B11ECA9D9700A712CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 868C958A1ECA9D9500A712CD /* mySwfitProgramming */;
+			target = 868C958A1ECA9D9500A712CD /* mySwiftProgramming */;
 			targetProxy = 868C95B01ECA9D9700A712CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -369,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -409,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,10 +425,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mySwfitProgramming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.enixsoft.mySwfitProgramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -432,10 +441,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mySwfitProgramming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.enixsoft.mySwfitProgramming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -447,7 +461,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.enixsoft.mySwfitProgrammingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mySwfitProgramming.app/mySwfitProgramming";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mySwiftProgramming.app/mySwiftProgramming";
 			};
 			name = Debug;
 		};
@@ -459,7 +474,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.enixsoft.mySwfitProgrammingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mySwfitProgramming.app/mySwfitProgramming";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mySwiftProgramming.app/mySwiftProgramming";
 			};
 			name = Release;
 		};
@@ -470,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.enixsoft.mySwfitProgrammingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = mySwfitProgramming;
 			};
 			name = Debug;
@@ -481,6 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.enixsoft.mySwfitProgrammingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = mySwfitProgramming;
 			};
 			name = Release;
@@ -488,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		868C95861ECA9D9500A712CD /* Build configuration list for PBXProject "mySwfitProgramming" */ = {
+		868C95861ECA9D9500A712CD /* Build configuration list for PBXProject "mySwiftProgramming" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				868C95B61ECA9D9700A712CD /* Debug */,
@@ -497,29 +515,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		868C95B81ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwfitProgramming" */ = {
+		868C95B81ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwiftProgramming" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				868C95B91ECA9D9700A712CD /* Debug */,
 				868C95BA1ECA9D9700A712CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		868C95BB1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwfitProgrammingTests" */ = {
+		868C95BB1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwiftProgrammingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				868C95BC1ECA9D9700A712CD /* Debug */,
 				868C95BD1ECA9D9700A712CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		868C95BE1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwfitProgrammingUITests" */ = {
+		868C95BE1ECA9D9700A712CD /* Build configuration list for PBXNativeTarget "mySwiftProgrammingUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				868C95BF1ECA9D9700A712CD /* Debug */,
 				868C95C01ECA9D9700A712CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "868C958A1ECA9D9500A712CD"
-               BuildableName = "mySwfitProgramming.app"
-               BlueprintName = "mySwfitProgramming"
-               ReferencedContainer = "container:mySwfitProgramming.xcodeproj">
+               BuildableName = "mySwiftProgramming.app"
+               BlueprintName = "mySwiftProgramming"
+               ReferencedContainer = "container:mySwiftProgramming.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "868C95A31ECA9D9700A712CD"
-               BuildableName = "mySwfitProgrammingTests.xctest"
-               BlueprintName = "mySwfitProgrammingTests"
-               ReferencedContainer = "container:mySwfitProgramming.xcodeproj">
+               BuildableName = "mySwiftProgrammingTests.xctest"
+               BlueprintName = "mySwiftProgrammingTests"
+               ReferencedContainer = "container:mySwiftProgramming.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "868C95AE1ECA9D9700A712CD"
-               BuildableName = "mySwfitProgrammingUITests.xctest"
-               BlueprintName = "mySwfitProgrammingUITests"
-               ReferencedContainer = "container:mySwfitProgramming.xcodeproj">
+               BuildableName = "mySwiftProgrammingUITests.xctest"
+               BlueprintName = "mySwiftProgrammingUITests"
+               ReferencedContainer = "container:mySwiftProgramming.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "868C958A1ECA9D9500A712CD"
-            BuildableName = "mySwfitProgramming.app"
-            BlueprintName = "mySwfitProgramming"
-            ReferencedContainer = "container:mySwfitProgramming.xcodeproj">
+            BuildableName = "mySwiftProgramming.app"
+            BlueprintName = "mySwiftProgramming"
+            ReferencedContainer = "container:mySwiftProgramming.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "868C958A1ECA9D9500A712CD"
-            BuildableName = "mySwfitProgramming.app"
-            BlueprintName = "mySwfitProgramming"
-            ReferencedContainer = "container:mySwfitProgramming.xcodeproj">
+            BuildableName = "mySwiftProgramming.app"
+            BlueprintName = "mySwiftProgramming"
+            ReferencedContainer = "container:mySwiftProgramming.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "868C958A1ECA9D9500A712CD"
-            BuildableName = "mySwfitProgramming.app"
-            BlueprintName = "mySwfitProgramming"
-            ReferencedContainer = "container:mySwfitProgramming.xcodeproj">
+            BuildableName = "mySwiftProgramming.app"
+            BlueprintName = "mySwiftProgramming"
+            ReferencedContainer = "container:mySwiftProgramming.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

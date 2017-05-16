@@ -9,6 +9,7 @@
 import UIKit
 import LocalAuthentication
 
+@available(iOS 8.0, *)
 class DemoToutchIDViewController: UIViewController {
     // 認証用コンテキスト.
     var myAuthContext : LAContext!
@@ -21,25 +22,25 @@ class DemoToutchIDViewController: UIViewController {
         // Do any additional setup after loading the view.
         myAuthContext = LAContext()
         
-        mySecurityLabel = UILabel(frame: CGRectMake(0, 0, 150, 150))
-        mySecurityLabel.backgroundColor = UIColor.orangeColor()
+        mySecurityLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        mySecurityLabel.backgroundColor = UIColor.orange
         mySecurityLabel.layer.masksToBounds = true
         mySecurityLabel.layer.cornerRadius = 75.0
-        mySecurityLabel.textColor = UIColor.whiteColor()
-        mySecurityLabel.shadowColor = UIColor.grayColor()
-        mySecurityLabel.font = UIFont.systemFontOfSize(CGFloat(30))
-        mySecurityLabel.textAlignment = NSTextAlignment.Center
+        mySecurityLabel.textColor = UIColor.white
+        mySecurityLabel.shadowColor = UIColor.gray
+        mySecurityLabel.font = UIFont.systemFont(ofSize: CGFloat(30))
+        mySecurityLabel.textAlignment = NSTextAlignment.center
         mySecurityLabel.layer.position = CGPoint(x: self.view.bounds.width/2, y: 300)
         
-        self.view.backgroundColor = UIColor.blackColor()
+        self.view.backgroundColor = UIColor.black
         
         self.view.addSubview(mySecurityLabel)
         
-        myButton = UIButton(frame: CGRectMake(0, 0, 200, 50))
-        myButton.setTitle("認証開始", forState: .Normal)
-        myButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        myButton.backgroundColor = UIColor.blueColor()
-        myButton.addTarget(self, action: #selector(DemoToutchIDViewController.checkSuccess), forControlEvents: .TouchUpInside)
+        myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        myButton.setTitle("認証開始", for: UIControlState())
+        myButton.setTitleColor(UIColor.white, for: UIControlState())
+        myButton.backgroundColor = UIColor.blue
+        myButton.addTarget(self, action: #selector(DemoToutchIDViewController.checkSuccess), for: .touchUpInside)
         myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 60)
         self.view.addSubview(myButton)
     }
@@ -59,8 +60,8 @@ class DemoToutchIDViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    func updateMySecurityLabel(success: Bool) {
-        dispatch_async(dispatch_get_main_queue(),{
+    func updateMySecurityLabel(_ success: Bool) {
+        DispatchQueue.main.async(execute: {
             if success {
                 print("認証成功")
                 self.mySecurityLabel.text = "認証成功"
@@ -73,44 +74,44 @@ class DemoToutchIDViewController: UIViewController {
 
     func checkSuccess() {
         
-        if myAuthContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: nil) {
-            myAuthContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics,
+        if myAuthContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,
                                          localizedReason: "テスト認証",
                                          reply: {
                                             // HONG (success: Bool, error: NSError!) -> Void in
                                             (success: Bool, error: NSError?) -> Void in
                                             self.updateMySecurityLabel(success)
-            })
+            } as! (Bool, Error?) -> Void)
         }
     }
     
     // MARK: - show Opreation View
     func showOpreationView() {
         // 背景色を設定.
-        self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor.blue
         
         // ボタンを作成.
-        let backButton: UIButton = UIButton(frame: CGRectMake(0,0,120,50))
-        backButton.backgroundColor = UIColor.redColor();
+        let backButton: UIButton = UIButton(frame: CGRect(x: 0,y: 0,width: 120,height: 50))
+        backButton.backgroundColor = UIColor.red;
         backButton.layer.masksToBounds = true
-        backButton.setTitle("Back", forState: .Normal)
+        backButton.setTitle("Back", for: UIControlState())
         backButton.layer.cornerRadius = 20.0
         //backButton.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
         backButton.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
-        backButton.addTarget(self, action: #selector(DemoToutchIDViewController.onClickBackButton(_:)), forControlEvents: .TouchUpInside)
+        backButton.addTarget(self, action: #selector(DemoToutchIDViewController.onClickBackButton(_:)), for: .touchUpInside)
         self.view.addSubview(backButton);
     }
 
-    func onClickBackButton(sender: UIButton){
+    func onClickBackButton(_ sender: UIButton){
         
         // 遷移するViewを定義.
         let prevController: UIViewController = DetailViewController()
         
         // アニメーションを設定.
-        prevController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        prevController.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         
         // Viewの移動.
-        self.presentViewController(prevController, animated: true, completion: nil)
+        self.present(prevController, animated: true, completion: nil)
     }
 
 

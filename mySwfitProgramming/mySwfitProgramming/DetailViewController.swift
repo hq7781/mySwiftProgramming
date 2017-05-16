@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.valueForKey("timeStamp")!.description
+                label.text = detail.value(forKey: "timeStamp")!.description
             }
         }
         
@@ -47,11 +47,11 @@ class DetailViewController: UIViewController {
     func showOpreationView() {
         // Update the user interface for the detail item.
 
-        myButton = UIButton(frame: CGRectMake(0, 0, 200, 50))
-        myButton.setTitle("Demo開始", forState: .Normal)
-        myButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        myButton.backgroundColor = UIColor.blueColor()
-        myButton.addTarget(self, action: #selector(DetailViewController.onClickDemoButton), forControlEvents: .TouchUpInside)
+        myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        myButton.setTitle("Demo開始", for: UIControlState())
+        myButton.setTitleColor(UIColor.white, for: UIControlState())
+        myButton.backgroundColor = UIColor.blue
+        myButton.addTarget(self, action: #selector(DetailViewController.onClickDemoButton), for: .touchUpInside)
         //myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 60)
         myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 260)
         self.view.addSubview(myButton)
@@ -61,10 +61,10 @@ class DetailViewController: UIViewController {
         let nextViewController: UIViewController = DemoToutchIDViewController()
         
         // アニメーションを設定する.
-        nextViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        nextViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
         
         // Viewの移動する.
-        self.presentViewController(nextViewController, animated: true, completion: nil)
+        self.present(nextViewController, animated: true, completion: nil)
         
     }
 
