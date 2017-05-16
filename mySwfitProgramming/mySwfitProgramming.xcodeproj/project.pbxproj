@@ -16,6 +16,7 @@
 		868C959E1ECA9D9600A712CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868C959C1ECA9D9600A712CD /* LaunchScreen.storyboard */; };
 		868C95A91ECA9D9700A712CD /* mySwfitProgrammingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95A81ECA9D9700A712CD /* mySwfitProgrammingTests.swift */; };
 		868C95B41ECA9D9700A712CD /* mySwfitProgrammingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95B31ECA9D9700A712CD /* mySwfitProgrammingUITests.swift */; };
+		868C95C31ECAA19500A712CD /* DemoToutchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		868C95AF1ECA9D9700A712CD /* mySwfitProgrammingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mySwfitProgrammingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		868C95B31ECA9D9700A712CD /* mySwfitProgrammingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySwfitProgrammingUITests.swift; sourceTree = "<group>"; };
 		868C95B51ECA9D9700A712CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoToutchIDViewController.swift; path = Demo/DemoToutchIDViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		868C958D1ECA9D9500A712CD /* mySwfitProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				868C95C11ECAA0E600A712CD /* demo */,
 				868C958E1ECA9D9500A712CD /* AppDelegate.swift */,
 				868C95931ECA9D9600A712CD /* MasterViewController.swift */,
 				868C95951ECA9D9600A712CD /* DetailViewController.swift */,
@@ -129,6 +132,14 @@
 				868C95B51ECA9D9700A712CD /* Info.plist */,
 			);
 			path = mySwfitProgrammingUITests;
+			sourceTree = "<group>";
+		};
+		868C95C11ECAA0E600A712CD /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */,
+			);
+			name = demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				868C958F1ECA9D9500A712CD /* AppDelegate.swift in Sources */,
 				868C95921ECA9D9600A712CD /* mySwfitProgramming.xcdatamodeld in Sources */,
+				868C95C31ECAA19500A712CD /* DemoToutchIDViewController.swift in Sources */,
 				868C95941ECA9D9600A712CD /* MasterViewController.swift in Sources */,
 				868C95961ECA9D9600A712CD /* DetailViewController.swift in Sources */,
 			);
