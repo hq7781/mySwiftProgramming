@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
+        self.view.backgroundColor = UIColor.white
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 // HONG label.text = detail.value(forKey: "timeStamp")!.description

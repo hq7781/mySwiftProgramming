@@ -21,6 +21,8 @@ class DemoToutchIDViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         myAuthContext = LAContext()
+        // 背景色を設定.
+        self.view.backgroundColor = UIColor.black
         
         mySecurityLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
         mySecurityLabel.backgroundColor = UIColor.orange
@@ -31,18 +33,19 @@ class DemoToutchIDViewController: UIViewController {
         mySecurityLabel.font = UIFont.systemFont(ofSize: CGFloat(30))
         mySecurityLabel.textAlignment = NSTextAlignment.center
         mySecurityLabel.layer.position = CGPoint(x: self.view.bounds.width/2, y: 300)
-        
-        self.view.backgroundColor = UIColor.black
-        
         self.view.addSubview(mySecurityLabel)
         
         myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        myButton.backgroundColor = UIColor.blue
         myButton.setTitle("認証開始", for: UIControlState())
         myButton.setTitleColor(UIColor.white, for: UIControlState())
-        myButton.backgroundColor = UIColor.blue
+        myButton.layer.masksToBounds = true
+        myButton.layer.cornerRadius = 20.0
+        myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y:self.view.bounds.height-200)
         myButton.addTarget(self, action: #selector(DemoToutchIDViewController.checkSuccess), for: .touchUpInside)
-        myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 60)
         self.view.addSubview(myButton)
+        
+        showOpreationView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,31 +76,29 @@ class DemoToutchIDViewController: UIViewController {
     }
 
     func checkSuccess() {
-        
+        self.mySecurityLabel.text = ""
         if myAuthContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,
-                                         localizedReason: "テスト認証",
+                                         localizedReason: "このアプリの利用には認証が必要です",
                                          reply: {
                                             (success: Bool, error: Error?) -> Void in
                                             self.updateMySecurityLabel(success)
                                             print("Touch ID Auth result: %@", error.debugDescription)
-            } )
+            })
         }
     }
     
     // MARK: - show Opreation View
     func showOpreationView() {
-        // 背景色を設定.
-        self.view.backgroundColor = UIColor.blue
-        
+
         // ボタンを作成.
         let backButton: UIButton = UIButton(frame: CGRect(x: 0,y: 0,width: 120,height: 50))
         backButton.backgroundColor = UIColor.red;
-        backButton.layer.masksToBounds = true
         backButton.setTitle("Back", for: UIControlState())
+        backButton.setTitleColor(UIColor.white, for: UIControlState())
+        backButton.layer.masksToBounds = true
         backButton.layer.cornerRadius = 20.0
-        //backButton.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
-        backButton.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
+        backButton.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-100)
         backButton.addTarget(self, action: #selector(DemoToutchIDViewController.onClickBackButton(_:)), for: .touchUpInside)
         self.view.addSubview(backButton);
     }
@@ -106,10 +107,8 @@ class DemoToutchIDViewController: UIViewController {
         
         // 遷移するViewを定義.
         let prevController: UIViewController = DetailViewController()
-        
         // アニメーションを設定.
         prevController.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-        
         // Viewの移動.
         self.present(prevController, animated: true, completion: nil)
     }
