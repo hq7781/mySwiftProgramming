@@ -45,7 +45,7 @@ class DemoToutchIDViewController: UIViewController {
         myButton.addTarget(self, action: #selector(DemoToutchIDViewController.checkSuccess), for: .touchUpInside)
         self.view.addSubview(myButton)
         
-        showOpreationView()
+        self.showOpreationView()
     }
 
     override func didReceiveMemoryWarning() {

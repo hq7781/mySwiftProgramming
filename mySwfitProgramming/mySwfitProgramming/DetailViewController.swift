@@ -11,8 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-    var myButton : UIButton!
-
+ 
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -37,7 +36,17 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         
+        self.showDeviceDisplayInfoView()
+        
         self.showOpreationView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // 端末の向きがかわったらNotificationを呼ばす設定.
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.onOrientationChange(notification:)),
+                                               name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,26 +57,86 @@ class DetailViewController: UIViewController {
     // MARK: - show Opreation View
     func showOpreationView() {
         // Update the user interface for the detail item.
-
-        myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        myButton.backgroundColor = UIColor.blue
         myButton.setTitle("Demo開始", for: UIControlState())
         myButton.setTitleColor(UIColor.white, for: UIControlState())
-        myButton.backgroundColor = UIColor.blue
+        myButton.layer.masksToBounds = true
+        myButton.layer.cornerRadius = 20.0
+        myButton.layer.position = CGPoint(x: self.view.bounds.width/2, y:self.view.bounds.height - 100)
         myButton.addTarget(self, action: #selector(DetailViewController.onClickDemoButton), for: .touchUpInside)
-        //myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 60)
-        myButton.layer.position = CGPoint(x: self.view.bounds.width / 2, y: 260)
+
         self.view.addSubview(myButton)
     }
+
     func onClickDemoButton() {
         // 遷移するViewを定義する.
         let nextViewController: UIViewController = DemoToutchIDViewController()
-        
         // アニメーションを設定する.
         nextViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
-        
         // Viewの移動する.
         self.present(nextViewController, animated: true, completion: nil)
         
+    }
+    
+    func showDeviceDisplayInfoView() {
+        
+        // Windowの表示領域すべてのサイズ(point).
+        let myBoundSize: CGSize = UIScreen.main.bounds.size
+        let myBoundSizeStr: NSString = "Bounds width: \(myBoundSize.width) height: \(myBoundSize.height)" as NSString
+        print("\(myBoundSizeStr)")
+        setMyLabel(text: myBoundSizeStr, point: CGPoint(x: 0, y: 100))
+        
+        // Windowの表示領域すべてのサイズ(pixel).
+        let myNativeBoundSize: CGSize = UIScreen.main.nativeBounds.size
+        let myNativeBoundSizeStr: NSString = "NativeBounds width: \(myNativeBoundSize.width) \nNativeBoundheight: \(myNativeBoundSize.height)" as NSString
+        print("\(myNativeBoundSizeStr)")
+        setMyLabel(text: myNativeBoundSizeStr, point: CGPoint(x: 0, y: 200))
+
+        // Windowの表示領域すべてのサイズ(pixel).
+        let myAppFrameSize: CGSize = UIScreen.main.bounds.size
+        let myAppFrameSizeStr: NSString = "applicationFrame width: \(myAppFrameSize.width) \nNativeBoundheight: \(myAppFrameSize.height)" as NSString
+        print("\(myAppFrameSizeStr)")
+        setMyLabel(text: myAppFrameSizeStr, point: CGPoint(x: 0, y: 300))
+        
+        // WindowのScale.
+        let myScale: CGFloat = UIScreen.main.scale
+        print("\(myScale)")
+        setMyLabel(text: "\(myScale)" as NSString, point: CGPoint(x: 0, y: 400))
+
+    }
+    
+    // ラベルの表示.
+    func setMyLabel(text: NSString, point: CGPoint){
+        let myLabel = UILabel(frame: CGRect(x:point.x,y:point.y,width:self.view.bounds.width,height:50))
+        myLabel.backgroundColor = UIColor.orange
+        myLabel.layer.masksToBounds = true
+        myLabel.layer.cornerRadius = 10.0
+        myLabel.textColor = UIColor.white
+        myLabel.shadowColor = UIColor.gray
+        myLabel.textAlignment = NSTextAlignment.center
+        myLabel.font = UIFont.systemFont(ofSize: 14)
+        myLabel.text = text as String
+        myLabel.numberOfLines = 2
+        self.view.addSubview(myLabel)
+    }
+    
+    // 端末の向きがかわったら呼び出される.
+    func onOrientationChange(notification: NSNotification){
+        
+        // 現在のデバイスの向きを取得.
+        let deviceOrientation: UIDeviceOrientation!  = UIDevice.current.orientation
+        // 向きの判定.
+        if UIDeviceOrientationIsLandscape(deviceOrientation) {
+            //横向きの判定. 向きに従って位置を調整する.
+            print("Landscape")
+        } else if UIDeviceOrientationIsPortrait(deviceOrientation){
+            //縦向きの判定. 向きに従って位置を調整する.
+            print("Portrait")
+        }
+        self.configureView()
+        self.showDeviceDisplayInfoView()
+        self.showOpreationView()
     }
 
 }
