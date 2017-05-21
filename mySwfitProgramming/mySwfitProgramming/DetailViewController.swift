@@ -57,21 +57,71 @@ class DetailViewController: UIViewController {
     // MARK: - show Opreation View
     func showOpreationView() {
         // Update the user interface for the detail item.
+        self.showOpreationDemo1Button()
+        self.showOpreationDemo2Button()
+        self.showOpreationDemo3Button()
+    }
+
+    func showOpreationDemo1Button() {
         let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         myButton.backgroundColor = UIColor.blue
-        myButton.setTitle("Demo開始", for: UIControlState())
+        myButton.setTitle("DemoToutchID開始", for: UIControlState())
         myButton.setTitleColor(UIColor.white, for: UIControlState())
         myButton.layer.masksToBounds = true
         myButton.layer.cornerRadius = 20.0
         myButton.layer.position = CGPoint(x: self.view.bounds.width/2, y:self.view.bounds.height - 100)
         myButton.addTarget(self, action: #selector(DetailViewController.onClickDemoButton), for: .touchUpInside)
-
+        
         self.view.addSubview(myButton)
     }
 
+    func showOpreationDemo2Button() {
+        let myButton2 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        myButton2.backgroundColor = UIColor.blue
+        myButton2.setTitle("ViewDrag開始", for: UIControlState())
+        myButton2.setTitleColor(UIColor.white, for: UIControlState())
+        myButton2.layer.masksToBounds = true
+        myButton2.layer.cornerRadius = 20.0
+        myButton2.layer.position = CGPoint(x: self.view.bounds.width/2, y:self.view.bounds.height - 200)
+        myButton2.addTarget(self, action: #selector(DetailViewController.onClickDemo2Button), for: .touchUpInside)
+
+        self.view.addSubview(myButton2)
+    }
+
+    func showOpreationDemo3Button() {
+        let myButton3 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        myButton3.backgroundColor = UIColor.blue
+        myButton3.setTitle("SubBotton開始", for: UIControlState())
+        myButton3.setTitleColor(UIColor.white, for: UIControlState())
+        myButton3.layer.masksToBounds = true
+        myButton3.layer.cornerRadius = 20.0
+        myButton3.layer.position = CGPoint(x: self.view.bounds.width/2, y:self.view.bounds.height - 300)
+        myButton3.addTarget(self, action: #selector(DetailViewController.onClickDemo3Button), for: .touchUpInside)
+
+        self.view.addSubview(myButton3)
+    }
+    
     func onClickDemoButton() {
         // 遷移するViewを定義する.
         let nextViewController: UIViewController = DemoToutchIDViewController()
+        // アニメーションを設定する.
+        nextViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+        // Viewの移動する.
+        self.present(nextViewController, animated: true, completion: nil)
+        
+    }
+    func onClickDemo2Button() {
+        // 遷移するViewを定義する.
+        let nextViewController: UIViewController = DemoViewDragViewController()
+        // アニメーションを設定する.
+        nextViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+        // Viewの移動する.
+        self.present(nextViewController, animated: true, completion: nil)
+        
+    }
+    func onClickDemo3Button() {
+        // 遷移するViewを定義する.
+        let nextViewController: UIViewController = DemoShowSubButtonViewController()
         // アニメーションを設定する.
         nextViewController.modalTransitionStyle = UIModalTransitionStyle.partialCurl
         // Viewの移動する.

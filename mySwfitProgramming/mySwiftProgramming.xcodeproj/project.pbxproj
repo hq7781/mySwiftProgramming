@@ -17,6 +17,9 @@
 		868C95A91ECA9D9700A712CD /* mySwfitProgrammingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95A81ECA9D9700A712CD /* mySwfitProgrammingTests.swift */; };
 		868C95B41ECA9D9700A712CD /* mySwfitProgrammingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95B31ECA9D9700A712CD /* mySwfitProgrammingUITests.swift */; };
 		868C95C31ECAA19500A712CD /* DemoToutchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */; };
+		B049742A1ED15AB300B3AC28 /* DemoViewDragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04974291ED15AB300B3AC28 /* DemoViewDragViewController.swift */; };
+		B049742C1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049742B1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift */; };
+		B049742E1ED1611500B3AC28 /* DemoShowSubButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049742D1ED1611500B3AC28 /* DemoShowSubButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		868C95B31ECA9D9700A712CD /* mySwfitProgrammingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySwfitProgrammingUITests.swift; sourceTree = "<group>"; };
 		868C95B51ECA9D9700A712CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoToutchIDViewController.swift; path = Demo/DemoToutchIDViewController.swift; sourceTree = "<group>"; };
+		B04974291ED15AB300B3AC28 /* DemoViewDragViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoViewDragViewController.swift; path = Demo/DemoViewDragViewController.swift; sourceTree = "<group>"; };
+		B049742B1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoShowSubButtonViewController.swift; path = Demo/DemoShowSubButtonViewController.swift; sourceTree = "<group>"; };
+		B049742D1ED1611500B3AC28 /* DemoShowSubButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoShowSubButton.swift; path = Demo/DemoShowSubButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */,
+				B04974291ED15AB300B3AC28 /* DemoViewDragViewController.swift */,
+				B049742B1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift */,
+				B049742D1ED1611500B3AC28 /* DemoShowSubButton.swift */,
 			);
 			name = demo;
 			sourceTree = "<group>";
@@ -277,10 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B049742A1ED15AB300B3AC28 /* DemoViewDragViewController.swift in Sources */,
+				B049742C1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift in Sources */,
 				868C958F1ECA9D9500A712CD /* AppDelegate.swift in Sources */,
 				868C95921ECA9D9600A712CD /* mySwfitProgramming.xcdatamodeld in Sources */,
 				868C95C31ECAA19500A712CD /* DemoToutchIDViewController.swift in Sources */,
 				868C95941ECA9D9600A712CD /* MasterViewController.swift in Sources */,
+				B049742E1ED1611500B3AC28 /* DemoShowSubButton.swift in Sources */,
 				868C95961ECA9D9600A712CD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
