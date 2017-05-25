@@ -82,22 +82,41 @@ class DemoToutchIDViewController: UIViewController {
                                          localizedReason: "このアプリの利用には認証が必要です",
                                          reply: {
                                             (success: Bool, error: Error?) -> Void in
+                                            let nserror = error as! NSError
                                             self.updateMySecurityLabel(success)
                                             print("Touch ID Auth result: %@", error.debugDescription)
                                             if (success) {
                                             } else {
                                                 print("Touch ID Auth Failed!")
-                                                self.myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthentication,
-                                                                             localizedReason: "パスコードを入力してください",
-                                                                             reply: {
-                                                                                (success: Bool, error: Error?) -> Void in
-                                                                                self.updateMySecurityLabel(success)
-                                                                                print("passcode Auth result: %@", error.debugDescription)
-                                                                                if (success) {
-                                                                                } else {
-                                                                                    print("Passcode Auth Failed!")
-                                                                                }
-                                                })
+                                                switch nserror._code {
+                                                case LAError.authenticationFailed.rawValue: //kLAErrorAuthenticationFailed:
+                                                    print("Touch ID Auth result: kSecUseAuthenticationUIFail")
+                                                case LAError.userCancel.rawValue: //kLAErrorUserCancel:
+                                                    print("Touch ID Auth result: kLAErrorUserCancel")
+                                                case LAError.userFallback.rawValue: //kLAErrorUserFallback:
+                                                    print("Touch ID Auth result: kLAErrorUserFallback")
+                                                    self.myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthentication,
+                                                                                      localizedReason: "パスコードを入力してください",
+                                                                                      reply: {
+                                                                                        (success: Bool, error: Error?) -> Void in
+                                                                                        self.updateMySecurityLabel(success)
+                                                                                        print("passcode Auth result: %@", error.debugDescription)
+                                                                                        if (success) {
+                                                                                        } else {
+                                                                                            print("Passcode Auth Failed!")
+                                                                                        }
+                                                    })
+                                                case LAError.systemCancel.rawValue: //kLAErrorSystemCancel:
+                                                    print("Touch ID Auth result: kLAErrorSystemCancel")
+                                                case LAError.passcodeNotSet.rawValue: //kLAErrorPasscodeNotSet:
+                                                    print("Touch ID Auth result: kLAErrorPasscodeNotSet")
+                                                case LAError.touchIDNotAvailable.rawValue:// kLAErrorTouchIDNotAvailable:
+                                                    print("Touch ID Auth result: kLAErrorTouchIDNotAvailable")
+                                                case LAError.touchIDNotEnrolled.rawValue: //kLAErrorTouchIDNotEnrolled:
+                                                    print("Touch ID Auth result: kLAErrorTouchIDNotEnrolled")
+                                                default: break
+                                                }
+                                                
                                             }
             })
         } else {
