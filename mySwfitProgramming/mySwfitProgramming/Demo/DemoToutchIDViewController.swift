@@ -84,6 +84,35 @@ class DemoToutchIDViewController: UIViewController {
                                             (success: Bool, error: Error?) -> Void in
                                             self.updateMySecurityLabel(success)
                                             print("Touch ID Auth result: %@", error.debugDescription)
+                                            if (success) {
+                                            } else {
+                                                print("Touch ID Auth Failed!")
+                                                self.myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthentication,
+                                                                             localizedReason: "パスコードを入力してください",
+                                                                             reply: {
+                                                                                (success: Bool, error: Error?) -> Void in
+                                                                                self.updateMySecurityLabel(success)
+                                                                                print("passcode Auth result: %@", error.debugDescription)
+                                                                                if (success) {
+                                                                                } else {
+                                                                                    print("Passcode Auth Failed!")
+                                                                                }
+                                                })
+                                            }
+            })
+        } else {
+            print("not support Touch ID Auth ")
+            self.myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthentication,
+                                              localizedReason: "パスコードを入力してください",
+                                              reply: {
+                                                (success: Bool, error: Error?) -> Void in
+                                                self.updateMySecurityLabel(success)
+                                                print("passcode Auth result: %@", error.debugDescription)
+                                                if (success) {
+                                                    self.showOKAlert()
+                                                } else {
+                                                    print("Passcode Auth Failed!")
+                                                }
             })
         }
     }
@@ -112,6 +141,19 @@ class DemoToutchIDViewController: UIViewController {
         // Viewの移動.
         self.present(prevController, animated: true, completion: nil)
     }
-
+    
+    func showOKAlert() {
+        
+        let alertController = UIAlertController(title: "成功",message: "指紋認証に成功",preferredStyle: .alert)
+        let okButton:UIAlertAction = UIAlertAction(title: "OK",style: UIAlertActionStyle.default,handler:{(action:UIAlertAction!) -> Void in
+            
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier:"next") as! DetailViewController
+            self.present(nextView, animated: true, completion: nil)
+        })
+        
+        alertController.addAction(okButton) 
+        present(alertController, animated: true, completion:nil) 
+    }
 
 }
