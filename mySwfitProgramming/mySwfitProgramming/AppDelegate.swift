@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
+        
+        /////// for startup process
+        self.checkAgreement()
+        self.checkSignin()
+        self.checkLockOnOff()
+        //////
         return true
     }
 
@@ -123,6 +129,73 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()
             }
+        }
+    }
+    
+    
+    ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////
+    func checkAgreement() {
+        let appUserDefault:UserDefaults = UserDefaults()
+        let agreementFlag:Bool = appUserDefault.bool(forKey: "AgreementFlag")
+        //appUserDefault.set(agreementFlag,forKey:"AgreementFlag")
+        
+        //個人情報同意がない場合同意提示画面に遷移
+        if (agreementFlag == false){
+            //windowを生成
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            //Storyboardを指定
+            let storyboard = UIStoryboard(name: "Startup", bundle: nil)
+            //Viewcontrollerを指定
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Agreement")
+            //rootViewControllerに入れる
+            self.window?.rootViewController = initialViewController
+            //表示
+            self.window?.makeKeyAndVisible()
+        }else{
+            //同意済みの場合その他処理、例え：Storyboardでチェックの入っているIs Initial View Controllerに遷移する
+        }
+    }
+    func checkSignin() {
+        let appUserDefault:UserDefaults = UserDefaults()
+        let currentUser:String? = appUserDefault.string(forKey: "CurrentUser")
+        //appUserDefault.set(currentUser,forKey:"CurrentUser")
+        
+        //ユーザーがいない場合サインイン画面に遷移
+        if (currentUser == nil){
+            //windowを生成
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            //Storyboardを指定
+            let storyboard = UIStoryboard(name: "Startup", bundle: nil)
+            //Viewcontrollerを指定
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Signin")
+            //rootViewControllerに入れる
+            self.window?.rootViewController = initialViewController
+            //表示
+            self.window?.makeKeyAndVisible()
+        }else{
+            //ユーザーがいる場合Storyboardでチェックの入っているIs Initial View Controllerに遷移する
+        }
+    }
+    func checkLockOnOff () {
+        let appUserDefault:UserDefaults = UserDefaults()
+        let lockOnOffFlag:Bool = appUserDefault.bool(forKey: "LockOnOffFlag")
+        //appUserDefault.set(lockOnOffFlag,forKey:"AgreementFlag")
+        
+        //ユーザーがいない場合サインイン画面に遷移
+        if (lockOnOffFlag == true){
+            //windowを生成
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            //Storyboardを指定
+            let storyboard = UIStoryboard(name: "Startup", bundle: nil)
+            //Viewcontrollerを指定
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TouchToUnlock")
+            //rootViewControllerに入れる
+            self.window?.rootViewController = initialViewController
+            //表示
+            self.window?.makeKeyAndVisible()
+        }else{
+            //ユーザーがいる場合Storyboardでチェックの入っているIs Initial View Controllerに遷移する
         }
     }
 

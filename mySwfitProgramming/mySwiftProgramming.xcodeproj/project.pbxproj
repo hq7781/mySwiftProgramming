@@ -17,6 +17,7 @@
 		868C95A91ECA9D9700A712CD /* mySwfitProgrammingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95A81ECA9D9700A712CD /* mySwfitProgrammingTests.swift */; };
 		868C95B41ECA9D9700A712CD /* mySwfitProgrammingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95B31ECA9D9700A712CD /* mySwfitProgrammingUITests.swift */; };
 		868C95C31ECAA19500A712CD /* DemoToutchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */; };
+		86E7D6BD1EDBCFF20010AF09 /* Startup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E7D6BB1EDBCFF20010AF09 /* Startup.storyboard */; };
 		B049742A1ED15AB300B3AC28 /* DemoViewDragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04974291ED15AB300B3AC28 /* DemoViewDragViewController.swift */; };
 		B049742C1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049742B1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift */; };
 		B049742E1ED1611500B3AC28 /* DemoShowSubButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049742D1ED1611500B3AC28 /* DemoShowSubButton.swift */; };
@@ -56,6 +57,7 @@
 		868C95B31ECA9D9700A712CD /* mySwfitProgrammingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySwfitProgrammingUITests.swift; sourceTree = "<group>"; };
 		868C95B51ECA9D9700A712CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		868C95C21ECAA19500A712CD /* DemoToutchIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoToutchIDViewController.swift; path = Demo/DemoToutchIDViewController.swift; sourceTree = "<group>"; };
+		86E7D6BC1EDBCFF20010AF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Startup.storyboard; sourceTree = "<group>"; };
 		B04974291ED15AB300B3AC28 /* DemoViewDragViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoViewDragViewController.swift; path = Demo/DemoViewDragViewController.swift; sourceTree = "<group>"; };
 		B049742B1ED15F2200B3AC28 /* DemoShowSubButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoShowSubButtonViewController.swift; path = Demo/DemoShowSubButtonViewController.swift; sourceTree = "<group>"; };
 		B049742D1ED1611500B3AC28 /* DemoShowSubButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoShowSubButton.swift; path = Demo/DemoShowSubButton.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				868C959C1ECA9D9600A712CD /* LaunchScreen.storyboard */,
 				868C959F1ECA9D9600A712CD /* Info.plist */,
 				868C95901ECA9D9600A712CD /* mySwfitProgramming.xcdatamodeld */,
+				86E7D6BB1EDBCFF20010AF09 /* Startup.storyboard */,
 			);
 			path = mySwfitProgramming;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E7D6BD1EDBCFF20010AF09 /* Startup.storyboard in Resources */,
 				868C959E1ECA9D9600A712CD /* LaunchScreen.storyboard in Resources */,
 				868C959B1ECA9D9600A712CD /* Assets.xcassets in Resources */,
 				868C95991ECA9D9600A712CD /* Main.storyboard in Resources */,
@@ -343,6 +347,14 @@
 				868C959D1ECA9D9600A712CD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		86E7D6BB1EDBCFF20010AF09 /* Startup.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86E7D6BC1EDBCFF20010AF09 /* Base */,
+			);
+			name = Startup.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
